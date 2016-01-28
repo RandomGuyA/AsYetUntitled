@@ -20,11 +20,10 @@ public class Background {
 	
 	public Background(){
 	
-		xmlDoc =  loadXMLFile("test-map.tmx");
+		/*xmlDoc =  loadXMLFile("test-map.tmx");
 		initialiseMap(xmlDoc);
-
-		System.out.println(map.getHeight());
-		System.out.println(map.getWidth());
+		initialiseTilesets(xmlDoc);
+	*/
 	}
 	
 	private void initialiseMap(Document xmlDoc){
@@ -36,7 +35,7 @@ public class Background {
 			NamedNodeMap nMap = nodeList.item(0).getAttributes();
 			for(int i=0; i<nMap.getLength(); i++){
 				addMapAttribute(nMap.item(i));
-				System.out.println(nMap.item(i).getNodeName());	
+				//System.out.println(nMap.item(i).getNodeName());	
 			}
 		}
 	}
@@ -66,7 +65,7 @@ public class Background {
        	 	
        	 	if (nNode.getNodeType() == Node.ELEMENT_NODE) {
        	 		Element eElement = (Element) nNode;
-       	 		System.out.println(eElement.getAttribute("width"));
+       	 		System.out.println(eElement.getAttribute("name"));
            }
         }
 		

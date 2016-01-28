@@ -1,10 +1,26 @@
 package Model;
 
+import java.util.ArrayList;
+
 public class Map {
 	
 	private int gid, width, height, tilewidth, tileheight;
+	private ArrayList<Tileset> tilesets;
 
+	public Map(){
+		
+	}
 	
+	public ArrayList<Tileset> getTilesets() {
+		return tilesets;
+	}
+
+
+	public void setTilesets(ArrayList<Tileset> tilesets) {
+		this.tilesets = tilesets;
+	}
+
+
 	public int getWidth() {
 		return width;
 	}
@@ -45,7 +61,5 @@ public class Map {
 	}
 
 
-	public Map(){
-		
-	}
+	
 }
